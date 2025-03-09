@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import Admin from "./admin";
-import Auth from "./auth";
-import Frontend from "./frontend";
+import Admin from '../routes/Admin'
+import Auth from "../routes/Auth";
+import Frontend from "../routes/Frontend";
 
 
 const router = createBrowserRouter([
