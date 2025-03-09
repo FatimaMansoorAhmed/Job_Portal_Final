@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+    --color-biegeBackground: #e6dace;
+    --color-buttonPrimary: #1c398e;
+    --color-backgroundBlue: #1c398e;
+  }
