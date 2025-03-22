@@ -77,8 +77,8 @@ const AddJobForm = () => {
         />
         
         {/* salary input */}
-        <input
-          type="text"
+        <textarea
+          
           placeholder="Salary"
           value={salary}
           onChange={(e) => setSalary(e.target.value)}
@@ -86,8 +86,8 @@ const AddJobForm = () => {
         />
         
         {/* working hours input */}
-        <input
-          type="text"
+        <textarea
+        
           placeholder="Hours"
           value={hours}
           onChange={(e) => setHours(e.target.value)}
