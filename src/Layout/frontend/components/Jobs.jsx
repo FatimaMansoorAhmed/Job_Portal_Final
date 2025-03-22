@@ -39,10 +39,10 @@ const Jobs = () => {
             >
               <h3 className="text-2xl font-semibold text-blue-900">{job.title}</h3>
               <p className="text-gray-700">{job.jobDescription}</p>
-              <h2 className="text-gray-700 text-xl">Requirment <br>Salary</br></h2>
+              <h2 className="text-gray-700 text-xl">Requirment</h2>
               <p className="text-gray-700">{job.requirment}</p>
-              {/* <h2 className="text-gray-700 text-xl">Salary</h2>
-              <p className="text-gray-700">{job.Salary}</p> */}
+              <h2 className="text-gray-700 text-xl">Salary</h2>
+              <p className="text-gray-700">{job.Salary}</p>
               <h2 className="text-gray-700 text-xl">Hours</h2>
               <p className="text-gray-700">{job.hours}</p>
               <button
