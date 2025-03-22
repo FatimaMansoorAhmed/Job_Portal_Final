@@ -105,60 +105,59 @@ const SignIn = () => {
     return (
         <>
             <section className="text-gray-600 body-font relative">
-    <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                {isactive ? "Sign Up" : "Sign In"}
-            </h1>
-        </div>
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <div className="flex flex-wrap -m-2">
-                {isactive && (
-                    <>
-                        <div className="p-2 w-full">
-                            <label htmlFor="userName" className="leading-7 text-sm text-gray-600">First Name</label>
-                            <input type="text" id="userName" name="userName" onChange={handleChange} value={formData.userName} 
-                                className="w-full bg-gray-100 border-2 border-gray-500 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-gray-700 py-2 px-3 rounded-lg outline-none transition-colors duration-200 ease-in-out" />
-                        </div>
-                        <div className="p-2 w-full">
-                            <label htmlFor="lastName" className="leading-7 text-sm text-gray-600">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" onChange={handleChange} value={formData.lastName} 
-                                className="w-full bg-gray-100 border-2 border-gray-500 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-gray-700 py-2 px-3 rounded-lg outline-none transition-colors duration-200 ease-in-out" />
-                        </div>
-                    </>
-                )}
-                <div className="p-2 w-full">
-                    <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                    <input type="email" id="email" name="email" onChange={handleChange} value={formData.email} 
-                        className="w-full bg-gray-100 border-2 border-gray-500 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-gray-700 py-2 px-3 rounded-lg outline-none transition-colors duration-200 ease-in-out" />
-                </div>
-                <div className="p-2 w-full">
-                    <label htmlFor="password" className="leading-7 text-sm text-gray-600">Password</label>
-                    <input type="password" id="password" name="password" onChange={handleChange} value={formData.password} 
-                        className="w-full bg-gray-100 border-2 border-gray-500 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-gray-700 py-2 px-3 rounded-lg outline-none transition-colors duration-200 ease-in-out" />
-                </div>
-                <div className='flex flex-wrap justify-center mt-4'>
-                    <button className="mx-2 text-white bg-buttonPrimary border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded-lg text-lg" 
-                        onClick={isactive ? handleSignUp : handleSubmit}>
-                        {isactive ? "Sign Up" : "Sign In"}
-                    </button>
-                    <button className="mx-2 text-gray-800 bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded-lg text-lg" 
-                        onClick={handleGoogleSignIn}>
-                        Sign In with Google
-                    </button>
-                </div>
-                <div className="text-center pt-5">
-                    <span>
-                        {isactive ? "Already have an account?" : "Not Registered?"} 
-                        <span onClick={handleChangeform} className='text-buttonPrimary cursor-pointer'> {isactive ? "Sign In" : "Sign Up"}</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <ToastContainer />
-</section>
+                <div className="container px-5 py-24 mx-auto">
+                    <div className="flex flex-col text-center w-full mb-12">
+                        {!isactive && <h1 className="sm:text-3xl text-center text-2xl font-medium title-font mb-4 text-gray-900">Sign In</h1>}
+                        {isactive && <h1 className="sm:text-3xl text-center text-2xl font-medium title-font mb-4 text-gray-900">Sign Up</h1>}
+                    </div>
+                    <div className="lg:w-1/2 md:w-2/3 mx-auto">
+                        <div className="flex flex-wrap -m-2">
+                            <div className="p-2 w-full">
+                            </div>
+                            <div className="p-2 w-full">
+                                {isactive && <div className="">
+                                    <label htmlFor="userName" className="leading-7 text-sm text-gray-600">First Name</label>
+                                    <input type="userName" id="userName" onChange={(e) => { handleChange(e) }} name="userName" value={formData.userName} className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                </div>}
+                                {isactive && <div className="">
+                                    <label htmlFor="lastName" className="leading-7 text-sm text-gray-600">Last Name</label>
+                                    <input type="lastName" id="lastName" onChange={(e) => { handleChange(e) }} name="lastName" value={formData.lastName} className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                </div>}
+                                <div className="">
+                                    <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
+                                    <input type="email" id="email" name="email" onChange={(e) => { handleChange(e) }} value={formData.email} className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="password" className="leading-7 text-sm text-gray-600">Password</label>
+                                    <input onChange={(e) => { handleChange(e) }} type="password" value={formData.password} id="password" name="password" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                </div>
+                            </div>
 
+                            <div className='flex flex-wrap justify-center'>
+                                {isactive && <div className="p-2">
+                                    <button className=" mx-2 text-white bg-buttonPrimary border-0 py-1 sm:py-2 px-2 sm:px-8 focus:outline-none hover:bg-blue-700 rounded text-sm sm:text-lg" onClick={handleSignUp}>Sign Up</button>
+                                    <button className=" mx-2 text-gray-800 bg-gray-300 border-0 py-1 sm:py-2 px-2 sm:px-8 focus:outline-none hover:bg-gray-400 rounded text-sm sm:text-lg" onClick={handleGoogleSignIn}>Sign In with Google</button>
+                                </div>}
+                                {!isactive && <div className="p-2">
+                                    <button className=" mx-2 text-white bg-buttonPrimary border-0 py-1 sm:py-2 px-2 sm:px-8 focus:outline-none hover:bg-blue-700 rounded text-sm sm:text-lg" onClick={handleSubmit}>Sign In</button>
+                                    <button className=" mx-2 text-gray-800 bg-gray-300 border-0 py-1 sm:py-2 px-2 sm:px-8 focus:outline-none hover:bg-gray-400 rounded text-sm sm:text-lg" onClick={handleGoogleSignIn}>Sign In with Google</button>
+                                </div>}
+                                <div className="text-center pt-5">
+                                    {!isactive && <div className='pl-0'>
+                                        <span>Not Registered..!</span> <span onClick={handleChangeform} className='text-buttonPrimary cursor-pointer'>Sign Up</span>
+                                    </div>}
+                                    {isactive && <div>
+                                        <span>Already have account! </span><span onClick={handleChangeform} className='text-buttonPrimary cursor-pointer'>Sign In</span>
+                                    </div>}
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ToastContainer/>
+            </section>
         </>
     )
 }
