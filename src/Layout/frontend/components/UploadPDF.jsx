@@ -14,7 +14,7 @@ const UploadPDF = () => {
   const saveApplicationToFirebase = async (jobTitle, jobId, name, email, pdfUrl) => {
     if (!jobId) {
       console.error("Error: jobId is undefined.");
-    //   alert("Error: jobId is missing.");
+      alert("Error: jobId is missing.");
       return;
     }
 
@@ -30,7 +30,7 @@ const UploadPDF = () => {
       });
 
       console.log("Application submitted successfully!");
-      // toast.success("Application submitted successfully!", { position: "top-center" });
+      toast.success("Application submitted successfully!", { position: "top-center" });
     } catch (error) {
       console.error("Error saving application:", error);
       toast.error("Error saving application:", { position: "top-center" });
@@ -56,7 +56,7 @@ const UploadPDF = () => {
       );
 
       const uploadedUrl = res.data.secure_url;
-    //   console.log("Uploaded PDF URL:", uploadedUrl);
+      console.log("Uploaded PDF URL:", uploadedUrl);
 
       await saveApplicationToFirebase(jobTitle, jobId, name, email, uploadedUrl);
       toast.success("Application submitted successfully!", { position: "top-center" });
