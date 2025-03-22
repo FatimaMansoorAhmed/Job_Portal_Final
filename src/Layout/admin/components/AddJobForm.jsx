@@ -7,13 +7,13 @@ const AddJobForm = () => {
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [requirment, setRequirment] = useState("");
-  const [salary, setSalary] = useState("");
+  // const [salary, setSalary] = useState("");
   const [hours, setHours] = useState("");
 
   // handle job posting function
   const postJob = async () => {
     // check if required fields are filled
-    if (!jobTitle || !jobDescription || !requirment || !salary) {
+    if (!jobTitle || !jobDescription || !requirment ) {
       alert("Please Fill out necessary fields.");
       return;
     }
@@ -24,7 +24,7 @@ const AddJobForm = () => {
         title: jobTitle,
         jobDescription: jobDescription,
         requirment: requirment,
-        salary: salary,
+        // salary: salary,
         hours: hours,
         postedAt: new Date(), 
       });
@@ -36,7 +36,7 @@ const AddJobForm = () => {
       setJobTitle("");
       setJobDescription("");
       setRequirment("");
-      setSalary("");
+      // setSalary("");
       setHours("");
     } catch (error) {
       console.error("Error posting job:", error);
@@ -76,14 +76,14 @@ const AddJobForm = () => {
           className="w-full p-3 border rounded-lg mb-3 h-28 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         
-        {/* salary input */}
+        {/* salary input
         <input
           type="text"
           placeholder="Salary"
           value={salary}
           onChange={(e) => setSalary(e.target.value)}
           className="w-full p-3 border rounded-lg mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+        /> */}
         
         {/* working hours input */}
         <input
