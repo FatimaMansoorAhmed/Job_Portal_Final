@@ -42,7 +42,7 @@ const Jobs = () => {
               <h2 className="text-gray-700 text-xl">Requirment</h2>
               <p className="text-gray-700">{job.requirment}</p>
               <h2 className="text-gray-700 text-xl">Salary</h2>
-              <p className="text-gray-700">{job.Salary}</p>
+              <p className="text-gray-700">{job.salary}</p>
               <h2 className="text-gray-700 text-xl">Hours</h2>
               <p className="text-gray-700">{job.hours}</p>
               <button
